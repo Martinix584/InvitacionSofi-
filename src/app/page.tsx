@@ -7,7 +7,7 @@ function Countdown() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
+    setTimeout(() => setIsClient(true), 0);
     // 31 de Mayo de 2026 a las 21:00 hs
     const targetDate = new Date('2026-05-31T21:00:00').getTime();
 
@@ -68,7 +68,7 @@ function StarBackground() {
       shape: shapes[Math.floor(Math.random() * shapes.length)],
       rotation: `${Math.random() * 360}deg`
     }));
-    setStars(newStars);
+    setTimeout(() => setStars(newStars), 0);
   }, []);
 
   return (
