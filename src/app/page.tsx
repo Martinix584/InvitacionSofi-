@@ -118,11 +118,24 @@ export default function Home() {
   };
 
   return (
-    <main className="container">
+    <>
       <StarBackground />
       
-      {/* Hero Section */}
-      <section className="hero fade-in">
+      {/* Portada / Pantalla de Bienvenida */}
+      <section className="welcome-screen">
+        <div className="welcome-image-container">
+          <img src="/portada.jpg" alt="Invitación Sofía" className="welcome-image" />
+          <div className="welcome-overlay"></div>
+        </div>
+        <div className="scroll-indicator">
+          <span className="scroll-text">Desliza</span>
+          <div className="scroll-icon">↓</div>
+        </div>
+      </section>
+
+      <main className="container">
+        {/* Hero Section */}
+        <section className="hero fade-in">
         <p className="hero-subtitle">Te invito a mis</p>
         <div style={{ fontFamily: 'var(--font-heading)', fontSize: '8rem', lineHeight: '0.9', color: 'var(--color-primary-dark)', margin: '0.5rem 0 1rem 0' }}>15</div>
         <h1 className="hero-title">Sofía</h1>
@@ -237,7 +250,7 @@ export default function Home() {
             )}
           </form>
         )}
-      </section>
-    </main>
+      </main>
+    </>
   );
 }
