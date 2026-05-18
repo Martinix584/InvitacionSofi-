@@ -167,7 +167,7 @@ export default function Home() {
           Lo más importante para mí es que estés presente.<br/>
           Pero si además deseas regalarme algo, puedes hacerlo a través del siguiente alias:<br/><br/>
           <strong style={{ color: 'var(--color-primary-dark)', fontSize: '1.8rem', background: 'var(--color-secondary)', padding: '0.5rem 1rem', borderRadius: '12px', display: 'inline-block' }}>
-            123sofia
+            sofia.535.tela
           </strong>
         </p>
       </section>
