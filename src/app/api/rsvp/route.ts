@@ -1,4 +1,4 @@
-import { sql } from '@vercel/postgres';
+import { neon } from '@neondatabase/serverless';
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
@@ -10,16 +10,18 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Nombre y cantidad son requeridos' }, { status: 400 });
     }
 
-    // Si la variable de entorno de Vercel Postgres no está configurada (ej. entorno local inicial),
-    // mostramos los datos por consola para poder probar el flujo.
-    if (!process.env.POSTGRES_URL) {
+    // Usar DATABASE_URL que es el estándar de Neon (o POSTGRES_URL de Vercel Postgres legacy)
+    const connectionString = process.env.DATABASE_URL || process.env.POSTGRES_URL;
+
+    if (!connectionString) {
       console.log('--- MODO DESARROLLO (Sin BD) ---');
       console.log('Nuevo RSVP recibido:', { name, count, message });
-      return NextResponse.json({ success: true, warning: 'Guardado en memoria/consola por falta de POSTGRES_URL' }, { status: 200 });
+      return NextResponse.json({ success: true, warning: 'Guardado en consola por falta de DATABASE_URL' }, { status: 200 });
     }
 
-    // Asegurarse de que la tabla exista (esto idealmente se hace en un script de migración,
-    // pero para este proyecto simple lo aseguramos aquí antes de insertar)
+    const sql = neon(connectionString);
+
+    // Asegurarse de que la tabla exista
     await sql`
       CREATE TABLE IF NOT EXISTS guests (
         id SERIAL PRIMARY KEY,
