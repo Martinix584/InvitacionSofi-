@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Invitación Digital - Sofía 🎂✨
 
-## Getting Started
+Una aplicación web moderna y elegante para gestionar invitaciones y confirmaciones de asistencia (RSVP) para una fiesta de 15 años. 
 
-First, run the development server:
+## Características Principales
+- **Diseño Responsivo:** Adaptado para visualizarse perfectamente tanto en dispositivos móviles como de escritorio.
+- **Estética Elegante:** Implementación de paletas de colores en tonos rosados y tipografías formales (`Alex Brush` y `Lato`).
+- **Animaciones y Efectos:** Fondo dinámico de estrellas animadas y transiciones fluidas.
+- **Cuenta Regresiva:** Contador en tiempo real hasta la fecha del evento.
+- **Sistema RSVP Integrado:** Formulario de confirmación de asistencia conectado directamente a una base de datos PostgreSQL.
+- **Integración con Google Maps:** Enlace directo para navegación asistida hacia el salón de eventos.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologías Utilizadas
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Lenguaje:** TypeScript / React 19
+- **Estilado:** CSS puro con Custom Properties (Variables CSS)
+- **Base de Datos:** [@vercel/postgres](https://vercel.com/docs/storage/vercel-postgres)
+- **Despliegue:** [Vercel](https://vercel.com/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Desarrollo Local
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Para correr el proyecto en tu entorno local:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/TuUsuario/InvitacionSofi-.git
+   ```
 
-## Learn More
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Despliegue en Producción
 
-## Deploy on Vercel
+El proyecto está diseñado para ser desplegado fácilmente con Vercel ("Zero Configuration").
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Importa el repositorio desde el panel de Vercel.
+2. Ve a la pestaña **Storage** dentro del proyecto en Vercel.
+3. Crea y asocia una base de datos **Postgres**. Esto inyectará automáticamente las credenciales (`POSTGRES_URL`) necesarias para que el sistema de RSVP funcione en producción.
+4. Despliega (Deploy) la aplicación.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Desarrollado con ❤️ para celebrar los 15 de Sofía.*
