@@ -136,14 +136,13 @@ export default function Home() {
       <main className="container">
         {/* Hero Section */}
         <section className="hero fade-in">
-        <p className="hero-subtitle">Te invito a mis</p>
-        <div style={{ fontFamily: 'var(--font-heading)', fontSize: '8rem', lineHeight: '0.9', color: 'var(--color-primary-dark)', margin: '0.5rem 0 1rem 0' }}>15</div>
-        <h1 className="hero-title">Sofía</h1>
-        <p className="hero-subtitle" style={{ fontSize: '2.5rem', marginTop: '-1rem', marginBottom: '2rem', color: 'var(--color-primary)' }}>Tirada Party</p>
-        <p className="hero-date">Domingo 31 de Mayo<br />De 21:00 hs a 02:00 am</p>
-        
-        <Countdown />
-      </section>
+          <p className="hero-subtitle">Te invito a mis</p>
+          <div style={{ fontFamily: 'var(--font-heading)', fontSize: '8rem', lineHeight: '0.9', color: 'var(--color-primary-dark)', margin: '0.5rem 0 1rem 0' }}>15</div>
+          <h1 className="hero-title">Sofía</h1>
+          <p className="hero-subtitle" style={{ fontSize: '2.5rem', marginTop: '-1rem', marginBottom: '2rem', color: 'var(--color-primary)' }}>Tirada Party</p>
+          <p className="hero-date">Domingo 31 de Mayo<br />De 21:00 hs a 02:00 am</p>
+          <Countdown />
+        </section>
 
       {/* Detalles del Evento */}
       <section className="card fade-in delay-1">
@@ -250,6 +249,7 @@ export default function Home() {
             )}
           </form>
         )}
+      </section>
       </main>
     </>
   );
